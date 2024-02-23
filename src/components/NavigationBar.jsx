@@ -33,7 +33,7 @@ export default function NavigationBar() {
                   <img
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
+                    alt="FDH"
                   />
                 </div>
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
