@@ -1,7 +1,7 @@
-import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { Bars3Icon, MoonIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, SunIcon, MoonIcon, ComputerDesktopIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import React, { useEffect, Fragment } from 'react';
 
 import logo from "../assets/logo/logo-transparent.png"
 
@@ -10,8 +10,33 @@ function classNames(...classes) {
 }
 
 export default function NavigationBar() {
+
+  const [theme, setTheme] = React.useState(() => window.localStorage.getItem('theme') || 'system');
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e) => {
+      const newTheme = e.matches ? 'dark' : 'light';
+      if (theme === 'system') {
+        document.documentElement.classList.toggle('dark', e.matches);
+      }
+    };
+    mediaQuery.addEventListener('change', handleChange);
+    if (theme === 'dark') document.documentElement.classList.add('dark');
+    else if (theme === 'light') document.documentElement.classList.remove('dark');
+    else document.documentElement.classList.toggle('dark', mediaQuery.matches);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [theme]);
+
+  const handleSetTheme = (newTheme) => {
+    setTheme(newTheme);
+    window.localStorage.setItem('theme', newTheme);
+  };
+
+
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="bg-white dark:bg-gray-800 shadow">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
@@ -83,14 +108,60 @@ export default function NavigationBar() {
                 </Disclosure.Button>
               </div>
               <div className="hidden lg:ml-4 lg:flex lg:items-center">
-                <button
-                  type="button"
-                  className="relative flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">Dark Mode</span>
-                  <MoonIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                <Menu as="div" className="relative">
+                  <div>
+                  <Menu.Button className="relative flex-shrink-0 rounded-full p-1 text-gray-400 hover:text-gray-500">
+                    <span className="absolute -inset-1.5" />
+                    <span className="sr-only">Dark Mode</span>
+                    <SunIcon className="h-5 w-5 stroke-2 stroke-primary-700" aria-hidden="true" />
+                  </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-200"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0  z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            onClick={() => handleSetTheme('light')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700')}
+                          >
+                            <SunIcon className="h-5 w-5 stroke-2 stroke-gray-700" aria-hidden="true" />
+                            Light
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            onClick={() => handleSetTheme('dark')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700')}
+                          >
+                            <MoonIcon className="h-5 w-5 stroke-2 stroke-gray-700" aria-hidden="true" />
+                            Dark
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            onClick={() => handleSetTheme('system')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700')}
+                          >
+                            <ComputerDesktopIcon className="h-5 w-5 stroke-2 stroke-gray-700" aria-hidden="true" />
+                            System
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
               </div>
             </div>
           </div>
