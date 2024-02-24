@@ -46,7 +46,7 @@ export default function NavigationBar() {
   console.log(currentTheme)
 
   return (
-    <Disclosure as="nav" className="shadow">
+    <Disclosure as="nav" className="shadow dark:shadow-slate-950">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 ">
@@ -62,30 +62,30 @@ export default function NavigationBar() {
                   </a>
                 </div>
                 <div className="hidden lg:ml-10 lg:flex lg:space-x-8">
-                  <a
+                  <span
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
                   >
                     UI Design
-                  </a>
-                  <a
+                  </span>
+                  <span
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
                   >
                     Frontend
-                  </a>
-                  <a
+                  </span>
+                  <span
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
                   >
                     Backend
-                  </a>
-                  <a
+                  </span>
+                  <span
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
                   >
                     Extras
-                  </a>
+                  </span>
                 </div>
               </div>
               <div className="flex flex-1 items-center justify-center px-2 lg:ml-6 lg:justify-end">
