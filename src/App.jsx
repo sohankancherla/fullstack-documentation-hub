@@ -3,10 +3,12 @@ import NavigationBar from './components/NavigationBar';
 
 export default function App() {
   return (
-    <Router>
-      <NavigationBar />
-      <Routes>
-      </Routes>
-    </Router>
+    <div className="min-h-screen bg-white dark:bg-slate-800">
+      <Router>
+        <NavigationBar />
+        <Routes>
+        </Routes>
+      </Router>
+    </div>
   )
 }

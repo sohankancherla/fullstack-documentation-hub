@@ -46,10 +46,10 @@ export default function NavigationBar() {
   console.log(currentTheme)
 
   return (
-    <Disclosure as="nav" className="bg-white dark:bg-gray-800 shadow">
+    <Disclosure as="nav" className="bg-white shadow dark:bg-slate-800">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
+          <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 ">
             <div className="flex h-16 justify-between">
               <div className="flex px-2 lg:px-0">
                 <div className="flex flex-shrink-0 items-center">
@@ -144,9 +144,9 @@ export default function NavigationBar() {
                         {({ active }) => (
                           <a
                             onClick={() => handleSetTheme('light')}
-                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700 cursor-pointer')}
+                            className={classNames(active ? 'bg-gray-100' : '', theme === 'light' ? 'text-primary-700' : 'text-gray-700', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                           >
-                            <SunIcon className="h-5 w-5 stroke-2 stroke-gray-700" aria-hidden="true" />
+                            <SunIcon className={classNames(theme === "light" ? "stroke-primary-700" : "stroke-gray-700", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                             Light
                           </a>
                         )}
@@ -155,9 +155,9 @@ export default function NavigationBar() {
                         {({ active }) => (
                           <a
                             onClick={() => handleSetTheme('dark')}
-                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700 cursor-pointer')}
+                            className={classNames(active ? 'bg-gray-100' : '', theme === 'dark' ? 'text-primary-700' : 'text-gray-700', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                           >
-                            <MoonIcon className="h-5 w-5 stroke-2 stroke-gray-700" aria-hidden="true" />
+                            <MoonIcon className={classNames(theme === "dark" ? "stroke-primary-700" : "stroke-gray-700", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                             Dark
                           </a>
                         )}
@@ -166,9 +166,9 @@ export default function NavigationBar() {
                         {({ active }) => (
                           <a
                             onClick={() => handleSetTheme('system')}
-                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700 cursor-pointer')}
+                            className={classNames(active ? 'bg-gray-100' : '', theme === 'system' ? 'text-primary-700' : 'text-gray-700', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                           >
-                            <ComputerDesktopIcon className="h-5 w-5 stroke-2 stroke-gray-700" aria-hidden="true" />
+                            <ComputerDesktopIcon className={classNames(theme === "system" ? "stroke-primary-700" : "stroke-gray-700", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                             System
                           </a>
                         )}
