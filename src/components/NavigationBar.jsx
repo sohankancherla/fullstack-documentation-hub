@@ -46,43 +46,45 @@ export default function NavigationBar() {
   console.log(currentTheme)
 
   return (
-    <Disclosure as="nav" className="bg-white shadow dark:bg-slate-800">
+    <Disclosure as="nav" className="shadow">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 ">
             <div className="flex h-16 justify-between">
               <div className="flex px-2 lg:px-0">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-14 w-auto"
-                    src={logo}
-                    alt="FDH"
-                  />
+                  <a href="/">
+                    <img
+                      className="h-14 w-auto"
+                      src={logo}
+                      alt="FDH"
+                    />
+                  </a>
                 </div>
                 <div className="hidden lg:ml-10 lg:flex lg:space-x-8">
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-primary-700 px-1 pt-1 text-sm font-medium text-gray-900"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700"
                   >
-                    Dashboard
+                    UI Design
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700"
                   >
-                    Team
+                    Frontend
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700"
                   >
-                    Projects
+                    Backend
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700"
                   >
-                    Calendar
+                    Extras
                   </a>
                 </div>
               </div>
