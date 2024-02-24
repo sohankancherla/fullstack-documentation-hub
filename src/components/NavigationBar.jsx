@@ -1,7 +1,7 @@
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Bars3Icon, SunIcon, MoonIcon, ComputerDesktopIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import React, { useEffect, Fragment } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 
 import logo from "../assets/logo/logo-transparent.png"
 
@@ -11,15 +11,25 @@ function classNames(...classes) {
 
 export default function NavigationBar() {
 
-  const [theme, setTheme] = React.useState(() => window.localStorage.getItem('theme') || 'system');
+  const getCurrentTheme = () => {
+    if (theme === 'system') {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'system-dark' : 'system-light';
+    }
+    return theme;
+  };
+
+  const [theme, setTheme] = useState(() => window.localStorage.getItem('theme') || 'system');
+  const [currentTheme, setCurrentTheme] = useState(getCurrentTheme());
 
   useEffect(() => {
+    setCurrentTheme(getCurrentTheme());
+
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e) => {
-      const newTheme = e.matches ? 'dark' : 'light';
       if (theme === 'system') {
         document.documentElement.classList.toggle('dark', e.matches);
       }
+      setCurrentTheme(getCurrentTheme());
     };
     mediaQuery.addEventListener('change', handleChange);
     if (theme === 'dark') document.documentElement.classList.add('dark');
@@ -33,7 +43,7 @@ export default function NavigationBar() {
     setTheme(newTheme);
     window.localStorage.setItem('theme', newTheme);
   };
-
+  console.log(currentTheme)
 
   return (
     <Disclosure as="nav" className="bg-white dark:bg-gray-800 shadow">
@@ -113,7 +123,11 @@ export default function NavigationBar() {
                   <Menu.Button className="relative flex-shrink-0 rounded-full p-1 text-gray-400 hover:text-gray-500">
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">Dark Mode</span>
-                    <SunIcon className="h-5 w-5 stroke-2 stroke-primary-700" aria-hidden="true" />
+                    {(currentTheme === "light" || currentTheme === "system-light") ? (
+                      <SunIcon className={classNames(currentTheme === "light" ? "stroke-primary-700" : "stroke-gray-700", "h-5 w-5 stroke-2")} aria-hidden="true" />
+                    ) : (
+                      <MoonIcon className={classNames(currentTheme === "dark" ? "stroke-primary-700" : "stroke-gray-700", "h-5 w-5 stroke-2")} aria-hidden="true" />
+                    )}
                   </Menu.Button>
                   </div>
                   <Transition
@@ -130,7 +144,7 @@ export default function NavigationBar() {
                         {({ active }) => (
                           <a
                             onClick={() => handleSetTheme('light')}
-                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700 cursor-pointer')}
                           >
                             <SunIcon className="h-5 w-5 stroke-2 stroke-gray-700" aria-hidden="true" />
                             Light
@@ -141,7 +155,7 @@ export default function NavigationBar() {
                         {({ active }) => (
                           <a
                             onClick={() => handleSetTheme('dark')}
-                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700 cursor-pointer')}
                           >
                             <MoonIcon className="h-5 w-5 stroke-2 stroke-gray-700" aria-hidden="true" />
                             Dark
@@ -152,7 +166,7 @@ export default function NavigationBar() {
                         {({ active }) => (
                           <a
                             onClick={() => handleSetTheme('system')}
-                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'flex gap-4 px-4 py-2 text-sm text-gray-700 cursor-pointer')}
                           >
                             <ComputerDesktopIcon className="h-5 w-5 stroke-2 stroke-gray-700" aria-hidden="true" />
                             System
