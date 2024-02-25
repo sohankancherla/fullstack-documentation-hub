@@ -103,7 +103,7 @@ export default function Footer({logo, companyName}) {
                 alt={companyName}
                 />
                 <p className="text-sm leading-6 text-gray-300">
-                Making the world a better place through constructing elegant hierarchies.
+                Consise, open source, beginner friendly documentation about everything fullstack.
                 </p>
                 <div className="flex space-x-6">
                 {navigation.social.map((item) => (
