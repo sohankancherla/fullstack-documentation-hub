@@ -52,12 +52,14 @@ export default function App() {
     { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
   ]
   return (
-    <Router>
-      <NavigationBar navigation={navigation} logo={logo} />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="antialiased min-h-screen bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-400">
+      <Router>
+        <NavigationBar navigation={navigation} logo={logo} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   )
 }
