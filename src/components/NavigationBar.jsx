@@ -1,15 +1,13 @@
 import { Dialog, Menu, Transition } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { Bars3Icon, SunIcon, MoonIcon, ComputerDesktopIcon, XMarkIcon, Cog6ToothIcon, HomeIcon, UsersIcon, FolderIcon, DocumentDuplicateIcon, CalendarIcon, ChartPieIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, SunIcon, MoonIcon, ComputerDesktopIcon, XMarkIcon} from '@heroicons/react/24/outline'
 import React, { useEffect, useState, Fragment } from 'react';
-
-import logo from "../assets/logo/logo-transparent.png"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavigationBar({navigation}) {
+export default function NavigationBar({navigation, logo}) {
 
   const getCurrentTheme = () => {
     if (theme === 'system') {
@@ -203,30 +201,13 @@ export default function NavigationBar({navigation}) {
                   </a>
                 </div>
                 <div className="hidden lg:ml-10 lg:flex lg:space-x-8">
-                  <span
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm leading-6 font-semibold hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
-                  >
-                    UI Design
-                  </span>
-                  <span
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm leading-6 font-semibold hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
-                  >
-                    Frontend
-                  </span>
-                  <span
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm leading-6 font-semibold hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
-                  >
-                    Backend
-                  </span>
-                  <span
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm leading-6 font-semibold hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
-                  >
-                    Extras
-                  </span>
+                  {navigation.map((item) => (
+                    <span
+                      className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm leading-6 font-semibold hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
+                    >
+                      {item.name}
+                    </span>
+                  ))}
                 </div>
               </div>
               <div className="flex flex-1 items-center justify-center px-2 lg:ml-6 lg:justify-end">
