@@ -47,7 +47,7 @@ export default function NavigationBar({navigation, logo}) {
 
   return (
     <>
-      <div className="antialiased min-h-screen bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-400">
+      <div className="antialiased bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-400">
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-50 lg:hidden" onClose={setSidebarOpen}>
             <Transition.Child

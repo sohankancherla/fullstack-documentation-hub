@@ -12,6 +12,9 @@ import {
 } from '@heroicons/react/24/outline'
 import NavigationBar from './components/NavigationBar';
 import logo from "./assets/logo/logo-transparent.png"
+import Footer from './components/Footer';
+
+import HomePage from './pages/HomePage';
 
 export default function App() {
   const navigation = [
@@ -52,7 +55,9 @@ export default function App() {
     <Router>
       <NavigationBar navigation={navigation} logo={logo} />
       <Routes>
+        <Route path="/" element={<HomePage />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }
