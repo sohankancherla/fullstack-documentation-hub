@@ -71,11 +71,11 @@ export default function NavigationBar({navigation, logo, companyName}) {
             <Transition.Child
               as={Fragment}
               enter="transition ease-in-out duration-300 transform"
-              enterFrom="-trangray-x-full"
-              enterTo="trangray-x-0"
+              enterFrom="-translate-x-full"
+              enterTo="translate-x-0"
               leave="transition ease-in-out duration-300 transform"
-              leaveFrom="trangray-x-0"
-              leaveTo="-trangray-x-full"
+              leaveFrom="translate-x-0"
+              leaveTo="-translate-x-full"
             >
               <Dialog.Panel className="relative mr-16 flex w-full max-w-xs flex-1">
                 <Transition.Child
@@ -221,13 +221,13 @@ export default function NavigationBar({navigation, logo, companyName}) {
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-200"
-                      enterFrom="opacity-0 trangray-y-1"
-                      enterTo="opacity-100 trangray-y-0"
+                      enterFrom="opacity-0 translate-y-1"
+                      enterTo="opacity-100 translate-y-0"
                       leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 trangray-y-0"
-                      leaveTo="opacity-0 trangray-y-1"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 translate-y-1"
                     >
-                      <Popover.Panel className="absolute -left-32 2xl:left-1/2 z-10 mt-6 flex w-screen max-w-max 2xl:-trangray-x-1/2 px-4">
+                      <Popover.Panel className="absolute -left-32 2xl:left-1/2 z-10 mt-6 flex w-screen max-w-max 2xl:-translate-x-1/2 px-4">
                         <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white dark:bg-gray-800 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-950">
                           <div className="p-4">
                             {item.subpages.map((page) => (
@@ -309,7 +309,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute right-0 2xl:left-1/2 2xl:-trangray-x-1/2 z-10 mt-2 w-32 origin-top-right rounded-md bg-white dark:bg-gray-800  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <Menu.Items className="absolute right-0 2xl:left-1/2 2xl:-translate-x-1/2 z-10 mt-2 w-32 origin-top-right rounded-md bg-white dark:bg-gray-800  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <Menu.Item>
                       {({ active }) => (
                         <a
