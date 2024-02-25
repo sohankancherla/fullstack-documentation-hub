@@ -205,25 +205,25 @@ export default function NavigationBar({navigation}) {
                 <div className="hidden lg:ml-10 lg:flex lg:space-x-8">
                   <span
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm leading-6 font-semibold hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
                   >
                     UI Design
                   </span>
                   <span
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm leading-6 font-semibold hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
                   >
                     Frontend
                   </span>
                   <span
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm leading-6 font-semibold hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
                   >
                     Backend
                   </span>
                   <span
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm leading-6 font-semibold hover:text-primary-700 dark:text-slate-200 dark:hover:text-primary-700 cursor-pointer"
                   >
                     Extras
                   </span>
@@ -277,7 +277,7 @@ export default function NavigationBar({navigation}) {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute left-1/2 -translate-x-1/2 z-10 mt-2 w-32 origin-top-right rounded-md bg-white dark:bg-slate-800  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 2xl:left-1/2 2xl:-translate-x-1/2 z-10 mt-2 w-32 origin-top-right rounded-md bg-white dark:bg-slate-800  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <a
