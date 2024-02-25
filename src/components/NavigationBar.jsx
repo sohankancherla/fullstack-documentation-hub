@@ -1,30 +1,12 @@
 import { Dialog, Menu, Transition, Popover } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Bars3Icon, SunIcon, MoonIcon, ComputerDesktopIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import {
-  ArrowPathIcon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-} from '@heroicons/react/24/outline'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import React, { useEffect, useState, Fragment } from 'react';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
-const solutions = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: "Your customers' data will be safe and secure", href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
-const callsToAction = [
-  { name: 'View More', href: '#', icon: PlayCircleIcon },
-]
 
 export default function NavigationBar({navigation, logo}) {
 
@@ -243,7 +225,7 @@ export default function NavigationBar({navigation, logo}) {
                         <Popover.Panel className="absolute -left-32 2xl:left-1/2 z-10 mt-6 flex w-screen max-w-max 2xl:-translate-x-1/2 px-4">
                           <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white dark:bg-slate-800 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-950">
                             <div className="p-4">
-                              {solutions.map((page) => (
+                              {item.subpages.map((page) => (
                                 <div key={page.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-slate-700">
                                   <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 dark:bg-slate-700 group-hover:bg-white dark:group-hover:bg-slate-800">
                                     <page.icon className="h-6 w-6 text-slate-700 dark:text-slate-400 group-hover:text-primary-700" aria-hidden="true" />
