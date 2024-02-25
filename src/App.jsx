@@ -44,21 +44,16 @@ export default function App() {
       { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
     ]},
   ]
-  const solutions = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'Security', description: "Your customers' data will be safe and secure", href: '#', icon: FingerPrintIcon },
-    { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-  ]
+  const companyName = "FDH";
+  const githubLink = "https://github.com/sohankancherla/fullstack-documentation-hub";
   return (
     <div className="antialiased min-h-screen bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-400">
       <Router>
-        <NavigationBar navigation={navigation} logo={logo} companyName={"FDH"} />
+        <NavigationBar navigation={navigation} logo={logo} companyName={companyName} />
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
-        <Footer logo={logo} companyName={"FDH"}/>
+        <Footer logo={logo} companyName={companyName} githubLink={githubLink}/>
       </Router>
     </div>
   )
