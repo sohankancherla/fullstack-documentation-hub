@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { PaintBrushIcon, WindowIcon, CircleStackIcon, PlusIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import {
   ArrowPathIcon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
+  PaintBrushIcon,
+  WindowIcon,
+  CircleStackIcon,
+  PlusIcon 
 } from '@heroicons/react/24/outline'
 import NavigationBar from './components/NavigationBar';
 import logo from "./assets/logo/logo-transparent.png"
