@@ -88,7 +88,7 @@ const navigation = {
     ],
 }
 
-export default function Footer() {
+export default function Footer({logo, companyName}) {
     return (
         <footer className="bg-gray-900" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
@@ -98,9 +98,9 @@ export default function Footer() {
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
                 <img
-                className="h-7"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Company name"
+                className="h-12"
+                src={logo}
+                alt={companyName}
                 />
                 <p className="text-sm leading-6 text-gray-300">
                 Making the world a better place through constructing elegant hierarchies.

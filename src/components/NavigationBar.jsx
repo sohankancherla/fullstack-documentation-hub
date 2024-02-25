@@ -8,7 +8,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavigationBar({navigation, logo}) {
+export default function NavigationBar({navigation, logo, companyName}) {
 
   const getCurrentTheme = () => {
     if (theme === 'system') {
@@ -100,7 +100,7 @@ export default function NavigationBar({navigation, logo}) {
                       <img
                         className="h-12 w-auto"
                         src={logo}
-                        alt="FDH"
+                        alt={companyName}
                       />
                     </a>
                   </div>
@@ -202,7 +202,7 @@ export default function NavigationBar({navigation, logo}) {
                   <img
                     className="h-14 w-auto"
                     src={logo}
-                    alt="FDH"
+                    alt={companyName}
                   />
                 </a>
               </div>

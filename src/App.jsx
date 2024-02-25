@@ -54,11 +54,11 @@ export default function App() {
   return (
     <div className="antialiased min-h-screen bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-400">
       <Router>
-        <NavigationBar navigation={navigation} logo={logo} />
+        <NavigationBar navigation={navigation} logo={logo} companyName={"FDH"} />
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
-        <Footer />
+        <Footer logo={logo} companyName={"FDH"}/>
       </Router>
     </div>
   )
