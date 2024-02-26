@@ -55,7 +55,7 @@ export default function Footer({logo, companyName, githubLink}) {
                 alt={companyName}
                 />
                 <p className="text-sm leading-6 text-gray-300">
-                Consise, open source, beginner friendly documentation about everything fullstack.
+                Concise, open source, beginner friendly documentation about everything fullstack.
                 </p>
                 <div className="flex space-x-6">
                 <a href={githubLink} className="text-gray-500 hover:text-gray-400 text-sm leading-6 flex gap-1">
