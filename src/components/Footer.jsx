@@ -1,27 +1,21 @@
 const navigation = {
-    solutions: [
-      { name: 'Marketing', href: '#' },
-      { name: 'Analytics', href: '#' },
-      { name: 'Commerce', href: '#' },
-      { name: 'Insights', href: '#' },
+    content: [
+      { name: 'UI Design', href: '#' },
+      { name: 'Front End', href: '#' },
+      { name: 'Back End', href: '#' },
+      { name: 'Extras', href: '#' },
     ],
-    support: [
-      { name: 'Pricing', href: '#' },
-      { name: 'Documentation', href: '#' },
-      { name: 'Guides', href: '#' },
-      { name: 'API Status', href: '#' },
+    resources: [
+      { name: 'MDN Web Docs', href: 'https://developer.mozilla.org/en-US/' },
     ],
     company: [
       { name: 'About', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Jobs', href: '#' },
-      { name: 'Press', href: '#' },
-      { name: 'Partners', href: '#' },
+      { name: 'Team', href: '#' },
     ],
-    legal: [
-      { name: 'Claim', href: '#' },
-      { name: 'Privacy', href: '#' },
-      { name: 'Terms', href: '#' },
+    support: [
+      { name: 'FAQ', href: '#' },
+      { name: 'Contribute', href: '#' },
+      { name: 'Contact Us', href: '#' },
     ],
     social: [
       {
@@ -73,9 +67,9 @@ export default function Footer({logo, companyName, githubLink}) {
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                 <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                    <h3 className="text-sm font-semibold leading-6 text-white">Solutions</h3>
+                    <h3 className="text-sm font-semibold leading-6 text-white">Content</h3>
                     <ul role="list" className="mt-6 space-y-4">
-                    {navigation.solutions.map((item) => (
+                    {navigation.content.map((item) => (
                         <li key={item.name}>
                         <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
                             {item.name}
@@ -85,9 +79,9 @@ export default function Footer({logo, companyName, githubLink}) {
                     </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                    <h3 className="text-sm font-semibold leading-6 text-white">Support</h3>
+                    <h3 className="text-sm font-semibold leading-6 text-white">Additional Resources</h3>
                     <ul role="list" className="mt-6 space-y-4">
-                    {navigation.support.map((item) => (
+                    {navigation.resources.map((item) => (
                         <li key={item.name}>
                         <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
                             {item.name}
@@ -111,9 +105,9 @@ export default function Footer({logo, companyName, githubLink}) {
                     </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                    <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
+                    <h3 className="text-sm font-semibold leading-6 text-white">Supoort</h3>
                     <ul role="list" className="mt-6 space-y-4">
-                    {navigation.legal.map((item) => (
+                    {navigation.support.map((item) => (
                         <li key={item.name}>
                         <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
                             {item.name}
@@ -126,7 +120,7 @@ export default function Footer({logo, companyName, githubLink}) {
             </div>
             </div>
             <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-            <p className="text-xs leading-5 text-gray-400">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+            <p className="text-xs leading-5 text-gray-400">&copy; 2024 Full Stack Documentation Hub. All rights reserved.</p>
             </div>
         </div>
         </footer>
