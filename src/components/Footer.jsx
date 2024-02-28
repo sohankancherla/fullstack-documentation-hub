@@ -36,7 +36,7 @@ const navigation = {
 
 export default function Footer({logo, companyName, githubLink}) {
     return (
-        <footer className="bg-gray-900" aria-labelledby="footer-heading">
+        <footer className="bg-white dark:bg-gray-900" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
             Footer
         </h2>
@@ -48,7 +48,7 @@ export default function Footer({logo, companyName, githubLink}) {
                 src={logo}
                 alt={companyName}
                 />
-                <p className="text-sm leading-6 text-gray-300">
+                <p className="text-sm leading-6 text-700 dark:text-gray-300">
                 Concise, open source, beginner friendly documentation about everything fullstack.
                 </p>
                 <div className="flex space-x-6">
