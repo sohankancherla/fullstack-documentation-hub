@@ -36,7 +36,7 @@ const navigation = {
 
 export default function Footer({logo, companyName, githubLink}) {
     return (
-        <footer className="bg-white dark:bg-gray-900" aria-labelledby="footer-heading">
+        <footer className="bg-gray-100 dark:bg-gray-800" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
             Footer
         </h2>
@@ -67,11 +67,11 @@ export default function Footer({logo, companyName, githubLink}) {
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                 <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                    <h3 className="text-sm font-semibold leading-6 text-white">Content</h3>
+                    <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-200">Content</h3>
                     <ul role="list" className="mt-6 space-y-4">
                     {navigation.content.map((item) => (
                         <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                        <a href={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                             {item.name}
                         </a>
                         </li>
@@ -79,11 +79,11 @@ export default function Footer({logo, companyName, githubLink}) {
                     </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                    <h3 className="text-sm font-semibold leading-6 text-white">Additional Resources</h3>
+                    <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Resources</h3>
                     <ul role="list" className="mt-6 space-y-4">
                     {navigation.resources.map((item) => (
                         <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                        <a href={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                             {item.name}
                         </a>
                         </li>
@@ -93,11 +93,11 @@ export default function Footer({logo, companyName, githubLink}) {
                 </div>
                 <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                    <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
+                    <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Company</h3>
                     <ul role="list" className="mt-6 space-y-4">
                     {navigation.company.map((item) => (
                         <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                        <a href={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                             {item.name}
                         </a>
                         </li>
@@ -105,11 +105,11 @@ export default function Footer({logo, companyName, githubLink}) {
                     </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                    <h3 className="text-sm font-semibold leading-6 text-white">Supoort</h3>
+                    <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Supoort</h3>
                     <ul role="list" className="mt-6 space-y-4">
                     {navigation.support.map((item) => (
                         <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                        <a href={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                             {item.name}
                         </a>
                         </li>

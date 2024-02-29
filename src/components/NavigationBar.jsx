@@ -228,7 +228,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
                       leaveTo="opacity-0 translate-y-1"
                     >
                       <Popover.Panel className="absolute -left-32 2xl:left-1/2 z-10 mt-6 flex w-screen max-w-max 2xl:-translate-x-1/2 px-4">
-                        <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white dark:bg-gray-800 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-950">
+                        <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white dark:bg-gray-800 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                           <div className="p-4">
                             {item.subpages.map((page) => (
                               <div key={page.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700">
