@@ -1,6 +1,7 @@
 import React from 'react'
 import Notification from '../components/Notification'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
+import "../style/main/HomePage.css"
 
 const icon = <ExclamationTriangleIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
 
@@ -10,16 +11,13 @@ const body = "Website is currently under construction aiming to be ready by May 
 const HomePage = () => {
   return (
     <>
-      <Notification icon={icon} title={title} body={body} />
-      <main>
-        <div className="flex flex-col items-center justify-center relative py-32">
-          <div className='flex justify-center items-center gap-1  sm:gap-2 md:gap-2 lg:gap-3'>
-            <h1 className="text-3xl tracking-tight text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">Everything About</h1>
-            <h1 className="text-3xl tracking-tight text-primary-700 sm:text-5xl md:text-6xl">Full Stack,</h1>
-          </div>
+      <header>
+        <div className="magicpattern flex flex-col items-center justify-center relative py-52">
+          <h1 className="text-3xl tracking-tight text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">Everything About <span className="text-primary-700">Full Stack,</span></h1>
           <h1 className="text-3xl tracking-tight text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">All in One Place</h1>
         </div>
-      </main>
+      </header>
+      <Notification icon={icon} title={title} body={body} />
     </>
   )
 }
