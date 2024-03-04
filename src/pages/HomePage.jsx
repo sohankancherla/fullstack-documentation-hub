@@ -1,7 +1,7 @@
 import React from 'react'
 import "../style/main/HomePage.css"
 import Banner from '../components/Banner'
-import FeatureSection from '../components/FeatureSection';
+import { Features } from '../components/Features';
 
 const text = "Website is currently under construction aiming to be ready by May 2024!";
 
@@ -10,14 +10,14 @@ const HomePage = () => {
     <>
       <header>
         <Banner text={text} />
-        <div className="magicpattern flex flex-col items-center justify-center relative py-52">
-          <h1 className="text-3xl font-medium tracking-tight text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">Everything About <span className="text-primary-700">Full Stack,</span></h1>
-          <h1 className="text-3xl font-medium tracking-tight text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">All in One Place</h1>
+        <div className="magicpattern flex flex-col items-center justify-center relative py-[35vh]">
+          <h1 className="text-4xl font-medium tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl">Everything About <span className="text-primary-700">Full Stack,</span></h1>
+          <h1 className="text-4xl font-medium tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl">All in One Place</h1>
         </div>
       </header>
       <main>
         <section>
-          <FeatureSection/>
+          <Features/>
         </section>
       </main>
     </>

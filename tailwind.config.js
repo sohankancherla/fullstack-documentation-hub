@@ -12,6 +12,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Fira Sans Condensed', ...defaultTheme.fontFamily.sans],
+        display: ['Fira Sans'],
       },
       colors: {
         primary: {
