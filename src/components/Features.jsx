@@ -54,7 +54,7 @@ export function Features() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-gradient-to-r from-primary-700 to-primary-500 dark:to-primary-900 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-gradient-to-r from-primary-700 to-primary-500 dark:to-primary-800 pb-28 pt-20 sm:py-32"
     >
       <div
         className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -63,11 +63,11 @@ export function Features() {
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Develop Faster
+          <h2 className="text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+            The Ultimate Guide to Full Stack Mastery
           </h2>
           <p className="mt-6 text-lg tracking-tight text-primary-100">
-            Explore user-friendly reference guides and tools on all full-stack topics
+            Dive into comprehensive docs and resources for every layer of full stack development
           </p>
         </div>
         <Tab.Group
