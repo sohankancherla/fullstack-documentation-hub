@@ -11,8 +11,8 @@ const HomePage = () => {
       <header>
         <Banner text={text} />
         <div className="magicpattern flex flex-col items-center justify-center relative py-[35vh]">
-          <h1 className="text-4xl font-medium tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl">Everything About <span className="text-primary-700">Full Stack,</span></h1>
-          <h1 className="text-4xl font-medium tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl">All in One Place</h1>
+          <h1 className="text-3xl font-medium tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl">Everything About <span className="text-primary-700">Full Stack,</span></h1>
+          <h1 className="text-3xl font-medium tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl md:text-6xl">All in One Place</h1>
         </div>
       </header>
       <main>
