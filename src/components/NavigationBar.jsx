@@ -3,6 +3,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Bars3Icon, SunIcon, MoonIcon, ComputerDesktopIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import React, { useEffect, useState, Fragment } from 'react';
+import Search from './Search';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -50,6 +51,8 @@ export default function NavigationBar({navigation, logo, companyName}) {
   } else {
     document.body.classList.remove('bg-gray-900');
   }
+
+  const [showSearch, setShowSearch] = useState(false);
 
   return (
     <>
@@ -270,13 +273,14 @@ export default function NavigationBar({navigation, logo, companyName}) {
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                     <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
                   </div>
-                  <input
+                  <div
                     id="search"
-                    name="search"
-                    className="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-700 sm:text-sm sm:leading-6"
-                    placeholder="Search"
-                    type="search"
-                  />
+                    className="block hover:cursor-pointer w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 ring-1 ring-inset ring-gray-300 hover:bg-gray-200 text-gray-400 sm:text-sm sm:leading-6"
+                    onClick={() => setShowSearch(true)}
+                  >
+                    Search
+                  </div>
+                  {showSearch && <Search open={showSearch} setOpen={setShowSearch}/>}
                 </div>
               </div>
             </div>
