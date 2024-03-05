@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import Container from './Container'
 
-export function Features({ features }) {
+export function Features({ title, descritption, features }) {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
   useEffect(() => {
@@ -31,10 +31,10 @@ export function Features({ features }) {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="text-3xl tracking-tight text-white text- sm:text-4xl md:text-5xl">
-            The Ultimate Guide to Full Stack Mastery
+            {title}
           </h2>
           <p className="mt-6 text-lg tracking-tight text-primary-100">
-            Dive into comprehensive docs and resources for every layer of full stack development
+            {descritption}
           </p>
         </div>
         <Tab.Group

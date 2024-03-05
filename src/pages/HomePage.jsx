@@ -11,6 +11,9 @@ const headerTextOne = "Everything About "
 const topicText = "Full Stack,"
 const headerTextTwo = "All in One Place"
 
+
+const featuresTitle = "The Ultimate Guide to Full Stack Mastery";
+const featuresDesc = "Dive into comprehensive docs and resources for every layer of full stack development"
 const features = [
   {
     title: 'UI Design',
@@ -47,7 +50,7 @@ const HomePage = () => {
       </header>
       <main>
         <section>
-          <Features features={features} />
+          <Features title={featuresTitle} descritption={featuresDesc} features={features} />
         </section>
         <section>
           <Roadmap />

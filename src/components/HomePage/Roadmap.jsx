@@ -12,7 +12,7 @@ export default function Roadmap() {
             Don't know where to start?
           </h2>
           <p className="mt-4 text-lg tracking-tight text-gray-700 dark:text-gray-400">
-          Check out our Full-Stack Developer Roadmap for a guided step-by-step path, 
+          Check out our Full-Stack Developer Roadmap for a step-by-step path, 
           ensuring a seamless transition from begineer to expert.  
           </p>
           <a
