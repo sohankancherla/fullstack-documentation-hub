@@ -4,7 +4,7 @@ export default function Roadmap({ title, descritption }) {
   return (
     <div
       id="get-started-today"
-      className="relative overflow-hidden bg-gray-100 dark:bg-gray-800 py-32"
+      className="relative overflow-hidden bg-white dark:bg-gray-900 py-32"
     >
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">

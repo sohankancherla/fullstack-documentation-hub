@@ -2,9 +2,9 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
 export default function Contribute() {
   return (
-    <div className="relative isolate overflow-hidden bg-white">
+    <div className="relative isolate overflow-hidden bg-gray-100 dark:bg-gray-800">
       <svg
-        className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        className="absolute inset-0 -z-10 h-full w-full stroke-gray-300 dark:stroke-gray-600 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
       >
         <defs>
@@ -23,10 +23,10 @@ export default function Contribute() {
       </svg>
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-          <h1 className="mt-10 text-4xl tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="mt-10 text-4xl tracking-tight text-gray-900 dark:text-gray-200 sm:text-6xl">
             Can't find what your looking for?
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
+          <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-400">
             Add it yourself. FDH flourishes with your input. By improving existing content or creating new resources, 
             you contribute directly to the enrichment and growth of the platform.
           </p>
@@ -38,7 +38,7 @@ export default function Contribute() {
                 href="https://github.com/sohankancherla/fullstack-documentation-hub">
                 View on Github
             </a>
-            <a href="#" className="text-sm font-medium leading-6 text-gray-900">
+            <a href="#" className="text-sm font-medium leading-6 text-gray-900 dark:text-gray-200">
               Learn more <span aria-hidden="true">→</span>
             </a>
           </div>
