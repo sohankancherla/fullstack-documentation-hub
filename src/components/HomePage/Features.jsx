@@ -26,11 +26,11 @@ export function Features({ features }) {
     <div
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-gradient-to-r from-primary-700 to-primary-500 dark:to-primary-800 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-gradient-to-r from-primary-700 dark:from-primary-900 to-primary-600 dark:to-primary-800 pb-28 pt-20 sm:py-32"
     >
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl tracking-tight text-white text- sm:text-4xl md:text-5xl">
             The Ultimate Guide to Full Stack Mastery
           </h2>
           <p className="mt-6 text-lg tracking-tight text-primary-100">

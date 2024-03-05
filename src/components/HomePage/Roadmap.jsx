@@ -4,14 +4,14 @@ export default function Roadmap() {
   return (
     <div
       id="get-started-today"
-      className="relative overflow-hidden bg-gray-100 py-32"
+      className="relative overflow-hidden bg-gray-100 dark:bg-gray-800 py-32"
     >
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl">
             Don't know where to start?
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-gray-700">
+          <p className="mt-4 text-lg tracking-tight text-gray-700 dark:text-gray-400">
           Check out our Full-Stack Developer Roadmap for a guided step-by-step path, 
           ensuring a seamless transition from begineer to expert.  
           </p>
