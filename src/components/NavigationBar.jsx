@@ -208,7 +208,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
               </div>
               <div className="hidden lg:ml-10 lg:flex lg:space-x-8">
                 {navigation.map((item) => (
-                  <Popover className="relative mt-4">
+                  <Popover className="relative mt-4" key={item.name}>
                     <Popover.Button className="inline-flex items-center gap-x-0 text-sm font-semibold leading-6 text-gray-700 hover:text-primary-700 dark:text-gray-200 dark:hover:text-primary-700 focus:outline-none">
                       <span
                         className="px-1 pt-1 text-sm leading-6 font-semibold cursor-pointer"
