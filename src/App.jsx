@@ -48,6 +48,7 @@ export default function App() {
   const description = "Concise, open source, beginner friendly documentation about everything fullstack.";
   const githubLink = "https://github.com/sohankancherla/fullstack-documentation-hub";
   const columnNames = ["Conent", "Other Resources", "Company", "Support"];
+  const copyrightText = "2024 Full Stack Documentation Hub. All rights reserved."
   const footerNavigation = {
     content: [
       { name: 'UI Design', href: '#' },
@@ -91,7 +92,16 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
-        <Footer logo={logo} companyName={companyName} githubLink={githubLink} columnNames={columnNames} navigation={footerNavigation}/>
+        <footer>
+          <Footer
+            logo={logo}
+            companyName={companyName}
+            githubLink={githubLink}
+            columnNames={columnNames}
+            navigation={footerNavigation}
+            copyright={copyrightText}
+          />
+        </footer>
       </Router>
     </div>
   )

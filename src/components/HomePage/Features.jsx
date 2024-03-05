@@ -23,7 +23,7 @@ export function Features({ features }) {
   }, [])
 
   return (
-    <section
+    <div
       id="features"
       aria-label="Features for running your books"
       className="relative overflow-hidden bg-gradient-to-r from-primary-700 to-primary-500 dark:to-primary-800 pb-28 pt-20 sm:py-32"
@@ -95,7 +95,7 @@ export function Features({ features }) {
                     <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <img
                         className="w-full"
-                        src=""
+                        src={feature.image}
                         alt=""
                         sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
                       />
@@ -107,6 +107,6 @@ export function Features({ features }) {
           )}
         </Tab.Group>
       </Container>
-    </section>
+    </div>
   )
 }

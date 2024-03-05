@@ -1,4 +1,4 @@
-export default function Footer({ logo, companyName, description, githubLink, columnNames, navigation }) {
+export default function Footer({ logo, companyName, description, githubLink, columnNames, navigation, copyright }) {
     return (
         <footer className="bg-gray-100 dark:bg-gray-800" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
@@ -84,7 +84,7 @@ export default function Footer({ logo, companyName, description, githubLink, col
             </div>
             </div>
             <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-            <p className="text-xs leading-5 text-gray-400">&copy; 2024 Full Stack Documentation Hub. All rights reserved.</p>
+            <p className="text-xs leading-5 text-gray-400">&copy;{copyright}</p>
             </div>
         </div>
         </footer>
