@@ -41,6 +41,9 @@ const features = [
   },
 ]
 
+const roadmapTitle = "Don't know where to start?";
+const roadmapDesc = "Check out our Full-Stack Developer Roadmap for a step-by-step path, ensuring a seamless transition from begineer to expert. ";
+
 const HomePage = () => {
   return (
     <>
@@ -53,7 +56,7 @@ const HomePage = () => {
           <Features title={featuresTitle} descritption={featuresDesc} features={features} />
         </section>
         <section>
-          <Roadmap />
+          <Roadmap title={roadmapTitle} descritption={roadmapDesc}/>
         </section>
         <section>
           <Contribute />

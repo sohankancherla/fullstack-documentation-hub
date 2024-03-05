@@ -1,6 +1,6 @@
 import Container from './Container'
 
-export default function Roadmap() {
+export default function Roadmap({ title, descritption }) {
   return (
     <div
       id="get-started-today"
@@ -9,11 +9,10 @@ export default function Roadmap() {
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-3xl tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl">
-            Don't know where to start?
+            {title}
           </h2>
           <p className="mt-4 text-lg tracking-tight text-gray-700 dark:text-gray-400">
-          Check out our Full-Stack Developer Roadmap for a step-by-step path, 
-          ensuring a seamless transition from begineer to expert.  
+            {descritption}
           </p>
           <a
             className='group inline-flex items-center justify-center rounded-full 
