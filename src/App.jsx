@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 
 export default function App() {
-  const navigation = [
+  const menuNavigation = [
     { name: 'UI Design', href: '#', icon: PaintBrushIcon, subpages: [
       { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
       { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
@@ -49,7 +49,7 @@ export default function App() {
   return (
     <div className="antialiased min-h-screen bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-400">
       <Router>
-        <NavigationBar navigation={navigation} logo={logo} companyName={companyName} />
+        <NavigationBar navigation={menuNavigation} logo={logo} companyName={companyName} />
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>

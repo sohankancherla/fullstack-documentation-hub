@@ -1,19 +1,20 @@
 import React from 'react'
 import "../style/main/HomePage.css"
-import Banner from '../components/Banner'
-import { Features } from '../components/Features';
+import Banner from '../components/HomePage/Banner'
+import { Features } from '../components/HomePage/Features';
+import Header from '../components/HomePage/Header';
 
-const text = "Website is currently under construction aiming to be ready by May 2024!";
+const bannerText = "Website is currently under construction aiming to be ready by May 2024!";
+const headerTextOne = "Everything About "
+const topicText = "Full Stack,"
+const headerTextTwo = "All in One Place"
 
 const HomePage = () => {
   return (
     <>
       <header>
-        <Banner text={text} />
-        <div className="magicpattern flex flex-col items-center justify-center relative py-52">
-          <h1 className="text-3xl font-normal tracking-tight text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">Everything About <span className="text-primary-700">Full Stack,</span></h1>
-          <h1 className="text-3xl font-normal tracking-tight text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">All in One Place</h1>
-        </div>
+        <Banner text={bannerText} />
+        <Header textOne={headerTextOne} topicText={topicText} textTwo={headerTextTwo}/>
       </header>
       <main>
         <section>
