@@ -7,27 +7,27 @@ import Container from './Container'
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'UI Design',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "Unlock the secrets of captivating interfaces with our extensive guides on aesthetics, usability, and user experience design.",
     image: "",
   },
   {
-    title: 'Claim expenses',
+    title: 'Frontend',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "Transform your ideas into reality with our detailed documentation on HTML, CSS, JavaScript, and modern frameworks to build interactive websites.",
     image: "",
   },
   {
-    title: 'VAT handling',
+    title: 'Backend',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      "Dive deep into server-side development with our tutorials on databases, server logic, and API integration for robust and scalable applications.",
     image: "",
   },
   {
-    title: 'Reporting',
+    title: 'Extras',
     description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+      "Enhance your knowledge with our collection of additional resources, from additional information to essential tips.",
     image: "",
   },
 ]
@@ -56,11 +56,6 @@ export function Features() {
       aria-label="Features for running your books"
       className="relative overflow-hidden bg-gradient-to-r from-primary-700 to-primary-500 dark:to-primary-800 pb-28 pt-20 sm:py-32"
     >
-      <div
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
-        width={2245}
-        height={1636}
-      />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">

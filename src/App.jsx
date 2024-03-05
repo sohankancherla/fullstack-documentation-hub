@@ -47,7 +47,7 @@ export default function App() {
   const companyName = "FDH";
   const description = "Concise, open source, beginner friendly documentation about everything fullstack.";
   const githubLink = "https://github.com/sohankancherla/fullstack-documentation-hub";
-  const columnNames = ["Conent", "Resources", "Company", "Support"];
+  const columnNames = ["Conent", "Other Resources", "Company", "Support"];
   const footerNavigation = {
     content: [
       { name: 'UI Design', href: '#' },
