@@ -23,37 +23,22 @@ export default function Contribute() {
       </svg>
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-          <img
-            className="h-11"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-          />
-          <div className="mt-24 sm:mt-32 lg:mt-16">
-            <a href="#" className="inline-flex space-x-6">
-              <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">
-                What's new
-              </span>
-              <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-                <span>Just shipped v1.0</span>
-                <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-              </span>
-            </a>
-          </div>
-          <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Deploy to the cloud with confidence
+          <h1 className="mt-10 text-4xl tracking-tight text-gray-900 sm:text-6xl">
+            Can't find what your looking for?
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat aliqua.
+          <p className="mt-6 text-lg leading-8 text-gray-700">
+            Add it yourself. FDH flourishes with your input. By improving existing content or creating new resources, 
+            you contribute directly to the enrichment and growth of the platform.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a
-              href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Get started
+                className=' rounded-full 
+                py-2 px-4 text-sm font-medium focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
+                bg-primary-700 text-white hover:bg-primary-600' 
+                href="https://github.com/sohankancherla/fullstack-documentation-hub">
+                View on Github
             </a>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            <a href="#" className="text-sm font-medium leading-6 text-gray-900">
               Learn more <span aria-hidden="true">→</span>
             </a>
           </div>

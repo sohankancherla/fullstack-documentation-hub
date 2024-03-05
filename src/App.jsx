@@ -47,7 +47,7 @@ export default function App() {
   const companyName = "FDH";
   const description = "Concise, open source, beginner friendly documentation about everything fullstack.";
   const githubLink = "https://github.com/sohankancherla/fullstack-documentation-hub";
-  const columnNames = ["Conent", "Other Resources", "Company", "Support"];
+  const columnNames = ["Conent", "Resources", "Company", "Support"];
   const copyrightText = "2024 Full Stack Documentation Hub. All rights reserved."
   const footerNavigation = {
     content: [
@@ -57,7 +57,7 @@ export default function App() {
       { name: 'Extras', href: '#' },
     ],
     resources: [
-      { name: 'MDN Web Docs', href: 'https://developer.mozilla.org/en-US/' },
+      { name: 'Roadmap', href: '#' },
     ],
     company: [
       { name: 'About', href: '#' },
@@ -96,6 +96,7 @@ export default function App() {
           <Footer
             logo={logo}
             companyName={companyName}
+            description={description}
             githubLink={githubLink}
             columnNames={columnNames}
             navigation={footerNavigation}
