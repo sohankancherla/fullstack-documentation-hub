@@ -4,35 +4,7 @@ import clsx from 'clsx'
 
 import Container from './Container'
 
-
-const features = [
-  {
-    title: 'UI Design',
-    description:
-      "Unlock the secrets of captivating interfaces with our extensive guides on aesthetics, usability, and user experience design.",
-    image: "",
-  },
-  {
-    title: 'Frontend',
-    description:
-      "Transform your ideas into reality with our detailed documentation on HTML, CSS, JavaScript, and modern frameworks to build interactive websites.",
-    image: "",
-  },
-  {
-    title: 'Backend',
-    description:
-      "Dive deep into server-side development with our tutorials on databases, server logic, and API integration for robust and scalable applications.",
-    image: "",
-  },
-  {
-    title: 'Extras',
-    description:
-      "Enhance your knowledge with our collection of additional resources, from additional information to essential tips.",
-    image: "",
-  },
-]
-
-export function Features() {
+export function Features({ features }) {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
   useEffect(() => {
