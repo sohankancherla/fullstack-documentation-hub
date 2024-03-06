@@ -3,6 +3,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Bars3Icon, SunIcon, MoonIcon, ComputerDesktopIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import React, { useEffect, useState, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import Search from './Search';
 
 function classNames(...classes) {
@@ -99,13 +100,13 @@ export default function NavigationBar({navigation, logo, companyName}) {
                 </Transition.Child>
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white dark:bg-gray-800 px-6 pb-4">
                   <div className="flex h-16 shrink-0 items-center">
-                    <a href="/">
+                    <Link to="/">
                       <img
                         className="h-12 w-auto"
                         src={logo}
                         alt={companyName}
                       />
-                    </a>
+                    </Link>
                   </div>
                   <nav className="flex flex-1 flex-col">
                     <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -113,8 +114,8 @@ export default function NavigationBar({navigation, logo, companyName}) {
                         <ul role="list" className="-mx-2 space-y-1">
                           {navigation.map((item) => (
                             <li key={item.name}>
-                              <a
-                                href={item.href}
+                              <Link
+                                to={item.href}
                                 className="text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-primary-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                               >
                                 <item.icon
@@ -122,7 +123,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
                                   aria-hidden="true"
                                 />
                                 {item.name}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -153,35 +154,35 @@ export default function NavigationBar({navigation, logo, companyName}) {
                             <Menu.Items className="absolute right-0 bottom-12 z-10 mt-2 w-32 origin-top-right rounded-md bg-white dark:bg-gray-800  py-1 shadow-lg dark:shadow-gray-900 ring-1 ring-black ring-opacity-5 focus:outline-none">
                               <Menu.Item>
                                 {({ active }) => (
-                                  <a
+                                  <button
                                     onClick={() => handleSetTheme('light')}
                                     className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'light' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                                   >
                                     <SunIcon className={classNames(theme === "light" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                                     Light
-                                  </a>
+                                  </button>
                                 )}
                               </Menu.Item>
                               <Menu.Item>
                                 {({ active }) => (
-                                  <a
+                                  <button
                                     onClick={() => handleSetTheme('dark')}
                                     className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'dark' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                                   >
                                     <MoonIcon className={classNames(theme === "dark" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                                     Dark
-                                  </a>
+                                  </button>
                                 )}
                               </Menu.Item>
                               <Menu.Item>
                                 {({ active }) => (
-                                  <a
+                                  <button
                                     onClick={() => handleSetTheme('system')}
                                     className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'system' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                                   >
                                     <ComputerDesktopIcon className={classNames(theme === "system" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                                     System
-                                  </a>
+                                  </button>
                                 )}
                               </Menu.Item>
                             </Menu.Items>
@@ -201,13 +202,13 @@ export default function NavigationBar({navigation, logo, companyName}) {
           <div className="flex h-16 justify-between">
             <div className="flex px-2 lg:px-0">
               <div className="flex flex-shrink-0 items-center">
-                <a href="/">
+                <Link to="/">
                   <img
                     className="h-14 w-auto"
                     src={logo}
                     alt={companyName}
                   />
-                </a>
+                </Link>
               </div>
               <div className="hidden lg:ml-10 lg:flex lg:space-x-8">
                 {navigation.map((item) => (
@@ -316,35 +317,35 @@ export default function NavigationBar({navigation, logo, companyName}) {
                   <Menu.Items className="absolute right-0 2xl:left-1/2 2xl:-translate-x-1/2 z-10 mt-2 w-32 origin-top-right rounded-md bg-white dark:bg-gray-800  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <Menu.Item>
                       {({ active }) => (
-                        <a
+                        <button
                           onClick={() => handleSetTheme('light')}
                           className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'light' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                         >
                           <SunIcon className={classNames(theme === "light" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                           Light
-                        </a>
+                        </button>
                       )}
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <a
+                        <button
                           onClick={() => handleSetTheme('dark')}
                           className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'dark' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                         >
                           <MoonIcon className={classNames(theme === "dark" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                           Dark
-                        </a>
+                        </button>
                       )}
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <a
+                        <button
                           onClick={() => handleSetTheme('system')}
                           className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'system' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                         >
                           <ComputerDesktopIcon className={classNames(theme === "system" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                           System
-                        </a>
+                        </button>
                       )}
                     </Menu.Item>
                   </Menu.Items>

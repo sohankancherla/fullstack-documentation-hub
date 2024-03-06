@@ -1,14 +1,15 @@
 import { ChevronLeftIcon } from '@heroicons/react/20/solid'
+import { Link } from 'react-router-dom';
 
 export default function Header({ title }) {
   return (
     <div>
       <div>
         <nav aria-label="Back">
-          <a href="/" className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-600">
+          <Link to="/" className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-600">
             <ChevronLeftIcon className="-ml-1 mr-1 h-5 w-5 flex-shrink-0" aria-hidden="true" />
             Home
-          </a>
+          </Link>
         </nav>
       </div>
       <div className="mt-2 md:flex md:items-center md:justify-between">

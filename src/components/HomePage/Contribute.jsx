@@ -1,4 +1,4 @@
-import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import { Link } from 'react-router-dom';
 
 export default function Contribute() {
   return (
@@ -38,9 +38,9 @@ export default function Contribute() {
                 href="https://github.com/sohankancherla/fullstack-documentation-hub">
                 View on Github
             </a>
-            <a href="#" className="text-sm font-medium leading-6 text-gray-900 dark:text-gray-200">
+            <Link to="#" className="text-sm font-medium leading-6 text-gray-900 dark:text-gray-200">
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">

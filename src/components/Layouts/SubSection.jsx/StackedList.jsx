@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import { Link } from 'react-router-dom';
 
 export default function StackedList({ subpages }) {
   return (
@@ -10,10 +11,10 @@ export default function StackedList({ subpages }) {
               <div className="flex min-w-0 gap-x-4">
                 <div className="min-w-0 flex-auto">
                   <p className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-200">
-                    <a href={page.href}>
+                    <Link to={page.href}>
                       <span className="absolute inset-x-0 -top-px bottom-0" />
                       {page.name}
-                    </a>
+                    </Link>
                   </p>
                   <p className="mt-1 flex text-xs leading-5 text-gray-500 dark:text-gray-400">
                     {page.description}

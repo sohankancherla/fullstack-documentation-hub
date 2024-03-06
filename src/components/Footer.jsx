@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer({ logo, companyName, description, githubLink, columnNames, navigation, copyright }) {
     return (
         <footer className="bg-white dark:bg-gray-900" aria-labelledby="footer-heading">
@@ -16,7 +18,7 @@ export default function Footer({ logo, companyName, description, githubLink, col
                   {description}
                 </p>
                 <div className="flex space-x-6">
-                <a href={githubLink} className="text-gray-500 hover:text-gray-400 text-sm leading-6 flex gap-1">
+                <Link to={githubLink} className="text-gray-500 hover:text-gray-400 text-sm leading-6 flex gap-1">
                   <span className="sr-only">Github</span>
                   <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
                     <path
@@ -25,7 +27,7 @@ export default function Footer({ logo, companyName, description, githubLink, col
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
                 </div>
             </div>
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -35,9 +37,9 @@ export default function Footer({ logo, companyName, description, githubLink, col
                     <ul role="list" className="mt-6 space-y-4">
                     {navigation.content.map((item) => (
                         <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                        <Link to={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                             {item.name}
-                        </a>
+                        </Link>
                         </li>
                     ))}
                     </ul>
@@ -47,9 +49,9 @@ export default function Footer({ logo, companyName, description, githubLink, col
                     <ul role="list" className="mt-6 space-y-4">
                     {navigation.resources.map((item) => (
                         <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                        <Link to={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                             {item.name}
-                        </a>
+                        </Link>
                         </li>
                     ))}
                     </ul>
@@ -61,9 +63,9 @@ export default function Footer({ logo, companyName, description, githubLink, col
                     <ul role="list" className="mt-6 space-y-4">
                     {navigation.company.map((item) => (
                         <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                        <Link to={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                             {item.name}
-                        </a>
+                        </Link>
                         </li>
                     ))}
                     </ul>
@@ -73,9 +75,9 @@ export default function Footer({ logo, companyName, description, githubLink, col
                     <ul role="list" className="mt-6 space-y-4">
                     {navigation.support.map((item) => (
                         <li key={item.name}>
-                        <a href={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                        <Link to={item.href} className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
                             {item.name}
-                        </a>
+                        </Link>
                         </li>
                     ))}
                     </ul>
