@@ -1,10 +1,10 @@
 import React from 'react'
-import "../style/main/HomePage.css"
-import Banner from '../components/HomePage/Banner'
-import { Features } from '../components/HomePage/Features';
-import Header from '../components/HomePage/Header';
-import Contribute from '../components/HomePage/Contribute';
-import Roadmap from '../components/HomePage/Roadmap';
+import "../../style/main/HomePage.css"
+import Banner from '../../components/HomePage/Banner'
+import { Features } from '../../components/HomePage/Features';
+import Header from '../../components/HomePage/Header';
+import Contribute from '../../components/HomePage/Contribute';
+import Roadmap from '../../components/HomePage/Roadmap';
 
 const bannerText = "Website is currently under construction aiming to be ready by May 2024!";
 const headerTextOne = "Everything About "

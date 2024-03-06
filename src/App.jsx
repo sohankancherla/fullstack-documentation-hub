@@ -13,8 +13,9 @@ import {
 import NavigationBar from './components/NavigationBar';
 import logo from "./assets/logo/logo-transparent.png"
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import NotFound from './pages/NotFound';
+import HomePage from './pages/main/HomePage';
+import NotFound from './pages/main/NotFound';
+import Backend from './pages/main/Backend';
 
 export default function App() {
   const menuNavigation = [
@@ -39,7 +40,7 @@ export default function App() {
       { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
       { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
     ]},
-    { name: 'Backend', href: '#', icon: CircleStackIcon, subpages: [
+    { name: 'Backend', href: '/backend', icon: CircleStackIcon, subpages: [
       { name: 'Python', description: 'High-level programming language', href: '#', icon: (props) => (
         <svg fill="currentColor"  viewBox="0 0 50 50" {...props}>
           <path 
@@ -112,6 +113,7 @@ export default function App() {
         <NavigationBar navigation={menuNavigation} logo={logo} description={description} companyName={companyName} />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/backend" element={<Backend />} />
           <Route path="/*" element={<NotFound logo={logo} companyName={companyName} />} />
         </Routes>
         <footer>
