@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../style/main/HomePage.css"
+import "../../style/HomePage.css"
 import Banner from '../../components/HomePage/Banner'
 import { Features } from '../../components/HomePage/Features';
 import Header from '../../components/HomePage/Header';

@@ -154,35 +154,35 @@ export default function NavigationBar({navigation, logo, companyName}) {
                             <Menu.Items className="absolute right-0 bottom-12 z-10 mt-2 w-32 origin-top-right rounded-md bg-white dark:bg-gray-800  py-1 shadow-lg dark:shadow-gray-900 ring-1 ring-black ring-opacity-5 focus:outline-none">
                               <Menu.Item>
                                 {({ active }) => (
-                                  <button
+                                  <a
                                     onClick={() => handleSetTheme('light')}
                                     className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'light' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                                   >
                                     <SunIcon className={classNames(theme === "light" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                                     Light
-                                  </button>
+                                  </a>
                                 )}
                               </Menu.Item>
                               <Menu.Item>
                                 {({ active }) => (
-                                  <button
+                                  <a
                                     onClick={() => handleSetTheme('dark')}
                                     className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'dark' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                                   >
                                     <MoonIcon className={classNames(theme === "dark" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                                     Dark
-                                  </button>
+                                  </a>
                                 )}
                               </Menu.Item>
                               <Menu.Item>
                                 {({ active }) => (
-                                  <button
+                                  <a
                                     onClick={() => handleSetTheme('system')}
                                     className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'system' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                                   >
                                     <ComputerDesktopIcon className={classNames(theme === "system" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                                     System
-                                  </button>
+                                  </a>
                                 )}
                               </Menu.Item>
                             </Menu.Items>
@@ -317,35 +317,35 @@ export default function NavigationBar({navigation, logo, companyName}) {
                   <Menu.Items className="absolute right-0 2xl:left-1/2 2xl:-translate-x-1/2 z-10 mt-2 w-32 origin-top-right rounded-md bg-white dark:bg-gray-800  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <Menu.Item>
                       {({ active }) => (
-                        <button
+                        <a
                           onClick={() => handleSetTheme('light')}
                           className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'light' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                         >
                           <SunIcon className={classNames(theme === "light" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                           Light
-                        </button>
+                        </a>
                       )}
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button
+                        <a
                           onClick={() => handleSetTheme('dark')}
                           className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'dark' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                         >
                           <MoonIcon className={classNames(theme === "dark" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                           Dark
-                        </button>
+                        </a>
                       )}
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button
+                        <a
                           onClick={() => handleSetTheme('system')}
                           className={classNames(active ? 'bg-gray-100 dark:bg-gray-700' : '', theme === 'system' ? 'text-primary-700' : 'text-gray-700 dark:text-gray-400', 'flex gap-4 px-4 py-2 text-sm cursor-pointer')}
                         >
                           <ComputerDesktopIcon className={classNames(theme === "system" ? "stroke-primary-700" : "stroke-gray-700 dark:stroke-gray-400", "h-5 w-5 stroke-2")} aria-hidden="true"/>
                           System
-                        </button>
+                        </a>
                       )}
                     </Menu.Item>
                   </Menu.Items>

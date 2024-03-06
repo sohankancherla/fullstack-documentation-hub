@@ -1,8 +1,9 @@
 import React from 'react'
+import { Layout } from '../../components/Layouts/Docs/Layout'
 
 const Python = () => {
   return (
-    <div>Python</div>
+   <Layout />
   )
 }
 
