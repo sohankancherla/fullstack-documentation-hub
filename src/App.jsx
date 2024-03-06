@@ -113,7 +113,7 @@ export default function App() {
         <NavigationBar navigation={menuNavigation} logo={logo} description={description} companyName={companyName} />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/backend" element={<Backend />} />
+          <Route path="/backend/*" element={<Backend />} />
           <Route path="/*" element={<NotFound logo={logo} companyName={companyName} />} />
         </Routes>
         <footer>

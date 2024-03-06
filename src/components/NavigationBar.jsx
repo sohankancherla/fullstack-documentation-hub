@@ -114,8 +114,8 @@ export default function NavigationBar({navigation, logo, companyName}) {
                         <ul role="list" className="-mx-2 space-y-1">
                           {navigation.map((item) => (
                             <li key={item.name}>
-                              <Link
-                                to={item.href}
+                              <a
+                                href={item.href}
                                 className="text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-primary-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                               >
                                 <item.icon
@@ -123,7 +123,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
                                   aria-hidden="true"
                                 />
                                 {item.name}
-                              </Link>
+                              </a>
                             </li>
                           ))}
                         </ul>
