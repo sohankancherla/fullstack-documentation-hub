@@ -2,12 +2,14 @@ import React from 'react'
 import Header from './Header'
 import StackedList from './StackedList'
 
+const pages = [
+  { name: 'Backend', href: '/backend', current: true },
+]
+
 const Layout = ({ title, subpages }) => {
   return (
     <>
-      <div className='mx-auto max-w-7xl px-2 sm:px-4 lg:px-8 py-7'>
-        <Header title={title}/>
-      </div>
+      <Header title={title} pages={pages}/>
       <StackedList subpages={subpages} />
     </>
   )
