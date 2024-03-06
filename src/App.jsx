@@ -13,9 +13,9 @@ import {
 import NavigationBar from './components/Main/NavigationBar';
 import logo from "./assets/logo/logo-transparent.png"
 import Footer from './components/Main/Footer';
-import HomePage from './pages/MainPages/HomePage';
-import NotFound from './pages/MainPages/NotFound';
-import Backend from './pages/MainPages/Backend';
+import HomePage from './pages/Main/HomePage';
+import NotFound from './pages/Main/NotFound';
+import Backend from './pages/Main/Backend';
 
 export default function App() {
   const menuNavigation = [
