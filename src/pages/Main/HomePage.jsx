@@ -5,6 +5,8 @@ import { Features } from '../../components/HomePage/Features';
 import Header from '../../components/HomePage/Header';
 import Contribute from '../../components/HomePage/Contribute';
 import Roadmap from '../../components/HomePage/Roadmap';
+import githubLight from "../../assets/images/github-light.png";
+import githubDark from "../../assets/images/github-dark.png";
 
 const bannerText = "Website is currently under construction aiming to be ready by May 2024!";
 const headerTextOne = "Everything About "
@@ -36,7 +38,7 @@ const features = [
   {
     title: 'Extras',
     description:
-      "Enhance your knowledge with our collection of additional resources, from additional information to essential tips.",
+      "Enhance your knowledge with our collection of additional resources, from supplementary information to essential tips.",
     image: "https://tailwindui.com/img/component-images/project-app-screenshot.png",
   },
 ]
@@ -59,7 +61,7 @@ const HomePage = () => {
           <Roadmap title={roadmapTitle} descritption={roadmapDesc}/>
         </section>
         <section>
-          <Contribute />
+          <Contribute image={githubLight} darkImage={githubDark} />
         </section>
       </main>
     </>

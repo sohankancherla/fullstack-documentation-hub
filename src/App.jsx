@@ -75,7 +75,7 @@ export default function App() {
     content: [
       { name: 'UI Design', href: '#' },
       { name: 'Front End', href: '#' },
-      { name: 'Back End', href: '#' },
+      { name: 'Back End', href: '/backend' },
       { name: 'Extras', href: '#' },
     ],
     resources: [
