@@ -213,13 +213,13 @@ export default function NavigationBar({navigation, logo, companyName}) {
               <div className="hidden lg:ml-10 lg:flex lg:space-x-8">
                 {navigation.map((item) => (
                   <Popover className="relative mt-4" key={item.name}>
-                    <Popover.Button className="inline-flex items-center gap-x-0 text-sm font-semibold leading-6 text-gray-700 hover:text-primary-700 dark:text-gray-200 dark:hover:text-primary-700 focus:outline-none">
+                    <Popover.Button className="inline-flex items-center gap-x-0 text-sm font-semibold leading-6 text-gray-700 hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-600 focus:outline-none ui-open:text-primary-700 dark:ui-open:text-primary-700">
                       <span
                         className="px-1 pt-1 text-sm leading-6 font-semibold cursor-pointer"
                       >
                         {item.name}
                       </span>
-                      <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+                      <ChevronDownIcon className="h-3 w-3 ui-open:rotate-180 ui-open:transform" aria-hidden="true" />
                     </Popover.Button>
               
                     <Transition

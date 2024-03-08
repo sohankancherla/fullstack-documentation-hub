@@ -47,8 +47,8 @@ export function PrevNextLinks({ prevNext }) {
 
     return (
         <dl className="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
-        {previousPage && <PageLink title={previousPage} href={previousHref} dir="previous" {...previousPage} />}
-        {nextPage && <PageLink title={nextPage} href={nextHref} className="ml-auto text-right" {...nextPage} />}
+        {previousPage && <PageLink title={previousPage} href={previousHref} dir="previous" />}
+        {nextPage && <PageLink title={nextPage} href={nextHref} className="ml-auto text-right" />}
         </dl>
     )
 }
