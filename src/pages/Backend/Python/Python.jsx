@@ -1,7 +1,6 @@
 import React from 'react'
 import { Layout } from '../../../components/Layouts/Docs/Layout'
 import { Routes, Route } from 'react-router-dom';
-import { DocsLayout } from '../../../components/Layouts/Docs/DocsLayout';
 import Header from '../../../components/Layouts/Docs/Header';
 import PythonPage from './PythonPage';
 
