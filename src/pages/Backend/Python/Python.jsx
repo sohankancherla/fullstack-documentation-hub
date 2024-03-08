@@ -9,7 +9,7 @@ const navigation = [
     {
       title: 'Introduction',
       links: [
-        { title: 'What is Python', href: '/backend/python' },
+        { title: 'What is Python?', href: '/backend/python' },
         { title: 'Installation', href: '/docs/installation' },
       ],
     },

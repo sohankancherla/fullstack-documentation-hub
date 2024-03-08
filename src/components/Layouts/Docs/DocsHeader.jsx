@@ -1,29 +1,13 @@
-'use client'
-
-import { usePathname } from 'next/navigation'
-
-export function DocsHeader({ title }) {
-  let pathname = usePathname()
-  let section = navigation.find((section) =>
-    section.links.find((link) => link.href === pathname),
-  )
-
-  if (!title && !section) {
-    return null
-  }
+export function DocsHeader({ title, section }) {
 
   return (
     <header className="mb-9 space-y-1">
-      {section && (
-        <p className="font-display text-sm font-medium text-sky-500">
-          {section.title}
-        </p>
-      )}
-      {title && (
-        <h1 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">
-          {title}
-        </h1>
-      )}
+      <p className="text-sm font-medium text-primary-700">
+        {section}
+      </p>
+      <h1 className="text-3xl text-gray-900 dark:text-gray-200">
+        {title}
+      </h1>
     </header>
   )
 }
