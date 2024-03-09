@@ -10,7 +10,7 @@ export default function StackedList({ subpages }) {
             <div className="mx-auto flex max-w-4xl justify-between gap-x-6">
               <div className="flex min-w-0 gap-x-4">
                 <div className="min-w-0 flex-auto">
-                  <p className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-200">
+                  <p className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
                     <Link to={page.href}>
                       <span className="absolute inset-x-0 -top-px bottom-0" />
                       {page.name}

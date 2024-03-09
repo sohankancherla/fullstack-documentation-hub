@@ -23,7 +23,7 @@ export default function Contribute({ image, darkImage }) {
       </svg>
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-          <h1 className="mt-10 text-4xl tracking-tight text-gray-900 dark:text-gray-200 sm:text-6xl">
+          <h1 className="mt-10 text-4xl tracking-tight text-gray-900 dark:text-white sm:text-6xl">
             Can't find what your looking for?
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-400">
@@ -38,7 +38,7 @@ export default function Contribute({ image, darkImage }) {
                 href="https://github.com/sohankancherla/fullstack-documentation-hub">
                 View on Github
             </a>
-            <Link to="#" className="text-sm font-medium leading-6 text-gray-900 dark:text-gray-200">
+            <Link to="#" className="text-sm font-medium leading-6 text-gray-900 dark:text-white">
               Learn more <span aria-hidden="true">→</span>
             </Link>
           </div>

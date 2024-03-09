@@ -116,10 +116,10 @@ export default function NavigationBar({navigation, logo, companyName}) {
                             <li key={item.name}>
                               <a
                                 href={item.href}
-                                className="text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-primary-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                className="text-gray-700 dark:text-white hover:text-white dark:hover:text-white hover:bg-primary-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                               >
                                 <item.icon
-                                  className="text-gray-700 dark:text-gray-200 group-hover:text-white dark:group-hover:text-white hover:bg-primary-700 h-6 w-6 shrink-0"
+                                  className="text-gray-700 dark:text-white group-hover:text-white dark:group-hover:text-white hover:bg-primary-700 h-6 w-6 shrink-0"
                                   aria-hidden="true"
                                 />
                                 {item.name}
@@ -130,15 +130,15 @@ export default function NavigationBar({navigation, logo, companyName}) {
                       </li>
                       <li className="mt-auto">
                         <Menu as="div" className="relative -mx-2">
-                          <Menu.Button className="text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-primary-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold w-full">
+                          <Menu.Button className="text-gray-700 dark:text-white hover:text-white dark:hover:text-white hover:bg-primary-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold w-full">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Dark Mode</span>
                             {(currentTheme === "light") ? (
-                              <SunIcon className="stroke-gray-700 dark:stroke-gray-200 group-hover:stroke-white dark:group-hover:stoke-white h-6 w-6 shrink-0" aria-hidden="true" />
+                              <SunIcon className="stroke-gray-700 dark:stroke-white group-hover:stroke-white dark:group-hover:stoke-white h-6 w-6 shrink-0" aria-hidden="true" />
                             ) : ((currentTheme === "dark") ? 
-                            (<MoonIcon className="stroke-gray-700 dark:stroke-gray-200 group-hover:stroke-white dark:group-hover:stoke-white h-6 w-6 shrink-0" aria-hidden="true" />
+                            (<MoonIcon className="stroke-gray-700 dark:stroke-white group-hover:stroke-white dark:group-hover:stoke-white h-6 w-6 shrink-0" aria-hidden="true" />
                             ) : (
-                              <ComputerDesktopIcon className="stroke-gray-700 dark:stroke-gray-200 group-hover:stroke-white dark:group-hover:stoke-white h-6 w-6 shrink-0" aria-hidden="true" />
+                              <ComputerDesktopIcon className="stroke-gray-700 dark:stroke-white group-hover:stroke-white dark:group-hover:stoke-white h-6 w-6 shrink-0" aria-hidden="true" />
                             ))}
                             Appearance
                           </Menu.Button>
@@ -213,7 +213,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
               <div className="hidden lg:ml-10 lg:flex lg:space-x-8">
                 {navigation.map((item) => (
                   <Popover className="relative mt-4" key={item.name}>
-                    <Popover.Button className="inline-flex items-center gap-x-0 text-sm font-semibold leading-6 text-gray-700 hover:text-primary-600 dark:text-gray-200 dark:hover:text-primary-600 focus:outline-none ui-open:text-primary-700 dark:ui-open:text-primary-700">
+                    <Popover.Button className="inline-flex items-center gap-x-0 text-sm font-semibold leading-6 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-600 focus:outline-none ui-open:text-primary-700 dark:ui-open:text-primary-700">
                       <span
                         className="px-1 pt-1 text-sm leading-6 font-semibold cursor-pointer"
                       >
@@ -240,7 +240,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
                                   <page.icon className="h-6 w-6 text-gray-700 dark:text-gray-400 group-hover:text-primary-700" aria-hidden="true" />
                                 </div>
                                 <div>
-                                  <a href={page.href} className="font-semibold text-gray-900 dark:text-gray-200">
+                                  <a href={page.href} className="font-semibold text-gray-900 dark:text-white">
                                     {page.name}
                                     <span className="absolute inset-0" />
                                   </a>
@@ -253,7 +253,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
                             <a
                               key={item.name}
                               href={item.href}
-                              className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600"
+                              className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
                             >
                               View More
                             </a>
@@ -276,7 +276,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
                   </div>
                   <div
                     id="search"
-                    className="block hover:cursor-pointer w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 ring-1 ring-inset ring-gray-300 hover:bg-gray-200 text-gray-400 sm:text-sm sm:leading-6"
+                    className="block hover:cursor-pointer w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 ring-1 ring-inset ring-gray-300 hover:bg-white text-gray-400 sm:text-sm sm:leading-6"
                     onClick={() => setShowSearch(true)}
                   >
                     Search
