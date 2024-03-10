@@ -5,7 +5,7 @@ const title = "Backend"
 const subpages = [
     {
         name: 'Python',
-        description: 'High-level programming language',
+        description: 'Programming language',
         href: '/backend/python',
     },
 ]

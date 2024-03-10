@@ -13,7 +13,7 @@ export function Navigation({ navigation, className }) {
             <h2 className="font-display font-medium text-gray-900 dark:text-white">
               {section.title}
             </h2>
-            <ul role="list" className="mt-2 space-y-2 border-l-2 border-gray-100 lg:mt-4 lg:space-y-4 lg:border-white dark:border-gray-800">
+            <ul role="list" className="mt-2 space-y-2 border-l-2 border-gray-200 lg:mt-4 lg:space-y-4 lg:border-gray-200 dark:border-gray-800">
               {section.links.map((link) => (
                 <li key={link.href} className="relative">
                   <Link
