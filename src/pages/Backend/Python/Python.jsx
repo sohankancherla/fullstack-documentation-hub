@@ -13,6 +13,7 @@ const navigation = [
       links: [
         { title: 'What is Python?', href: '/backend/python' },
         { title: 'Installation', href: '/backend/python/installation' },
+        { title: 'IDE', href: '/backend/python/ide' },
       ],
     },
     {
@@ -73,16 +74,15 @@ const companyName="FDH"
 const Python = () => {
   return (
     <>
-      <Header title={title} pages={pages}/>
-      <Layout
-        navigation={navigation}
-        children={
         <Routes>
-          <Route path="/" element={<PythonPage />} />
-          <Route path="/installation" element={<Installation />} />
+          <Route path="/" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
+            <PythonPage />
+          } />}/>
+          <Route path="/installation" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
+            <Installation />
+          } />}/>
           <Route path="/*" element={<NotFound logo={logo} companyName={companyName} />} />
-        </Routes>}
-      />
+        </Routes>
     </>
   )
 }

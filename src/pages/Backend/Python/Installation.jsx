@@ -10,10 +10,10 @@ const title = "Installation"
 const section = "Introduction"
 const description = ""
 const prevNext = {
-    previousPage: null,
-    previousHref: null,
-    nextPage: "Installation",
-    nextHref: "/backend/python/installation"
+    previousPage: "What is Python?",
+    previousHref: "/backend/python/",
+    nextPage: "IDE",
+    nextHref: "/backend/python/ide"
 }
 const tableOfContents = [
   {
