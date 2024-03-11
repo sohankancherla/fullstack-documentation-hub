@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { Link } from 'react-router-dom';
 
 function ArrowIcon(props) {
     return (
@@ -15,8 +16,8 @@ function PageLink({ title, href, dir = 'next', ...props }) {
           {dir === 'next' ? 'Next' : 'Previous'}
         </dt>
         <dd className="mt-1">
-          <a
-            href={href}
+          <Link
+            to={href}
             className={clsx(
               'flex items-center gap-x-1 text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300',
               dir === 'previous' && 'flex-row-reverse',
@@ -29,7 +30,7 @@ function PageLink({ title, href, dir = 'next', ...props }) {
                 dir === 'previous' && '-scale-x-100',
               )}
             />
-          </a>
+          </Link>
         </dd>
       </div>
     )

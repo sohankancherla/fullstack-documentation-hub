@@ -16,6 +16,7 @@ import Footer from './components/Main/Footer';
 import HomePage from './pages/Main/HomePage';
 import NotFound from './pages/Main/NotFound';
 import Backend from './pages/Main/Backend';
+import { ScrollToTop } from './components/Main/ScrollToTop';
 
 export default function App() {
   const menuNavigation = [
@@ -110,6 +111,7 @@ export default function App() {
   return (
     <div className="antialiased min-h-screen bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-400">
       <Router>
+        <ScrollToTop />
         <NavigationBar navigation={menuNavigation} logo={logo} description={description} companyName={companyName} />
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -6,9 +6,9 @@ import Header3 from '../../../components/Layouts/Docs/Header3'
 import Table from '../../../components/Layouts/Docs/Table'
 import UnorderedList from '../../../components/Layouts/Docs/UnorderedList'
 
-const title = "What is Python?"
+const title = "Installation"
 const section = "Introduction"
-const description = "Python is a programming language loved by many for its simple and intuitive syntax. Meta, Amazon, Apple, Google, and Microsoft are few of the many companies that use Python in their tech stack."
+const description = ""
 const prevNext = {
     previousPage: null,
     previousHref: null,
@@ -31,7 +31,7 @@ const tableOfContents = [
 ];
 
 
-const PythonPage = () => {
+export default function Installation() {
   return (
     <DocsLayout 
       prevNext={prevNext}
@@ -47,7 +47,8 @@ const PythonPage = () => {
           <p>Source: <a className='text-primary-700 hover:text-primary-800' href="https://www.devjobsscanner.com/blog/top-8-most-demanded-programming-languages/">devjobsscanner</a></p>
           <Header2 id={"applications"} text={"Applications"} />
           <p>
-            Developers use Python for many different applications because of its extensive collection of libraries.
+            Developers use Python for a wide variety of applications because of its vast collection of libraries
+             that are designed to streamline a specific task.
           </p>
           <Header3 id={"automation"} text={"Automation"}/>
           <p>
@@ -77,5 +78,3 @@ const PythonPage = () => {
     />
   )
 }
-
-export default PythonPage

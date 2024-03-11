@@ -2,14 +2,17 @@ import React from 'react'
 import { Layout } from '../../../components/Layouts/Docs/Layout'
 import { Routes, Route } from 'react-router-dom';
 import Header from '../../../components/Layouts/Docs/Header';
+import logo from "../../../assets/logo/logo-transparent.png"
+import NotFound from '../../Main/NotFound';
 import PythonPage from './PythonPage';
+import Installation from './Installation';
 
 const navigation = [
     {
       title: 'Introduction',
       links: [
         { title: 'What is Python?', href: '/backend/python' },
-        { title: 'Installation', href: '/docs/installation' },
+        { title: 'Installation', href: '/backend/python/installation' },
       ],
     },
     {
@@ -65,6 +68,7 @@ const pages = [
   { name: 'Backend', href: '/backend', current: false },
   { name: 'Python', href: '/backend/python', current: true },
 ]
+const companyName="FDH"
 
 const Python = () => {
   return (
@@ -75,6 +79,8 @@ const Python = () => {
         children={
         <Routes>
           <Route path="/" element={<PythonPage />} />
+          <Route path="/installation" element={<Installation />} />
+          <Route path="/*" element={<NotFound logo={logo} companyName={companyName} />} />
         </Routes>}
       />
     </>

@@ -114,8 +114,8 @@ export default function NavigationBar({navigation, logo, companyName}) {
                         <ul role="list" className="-mx-2 space-y-1">
                           {navigation.map((item) => (
                             <li key={item.name}>
-                              <a
-                                href={item.href}
+                              <Link
+                                to={item.href}
                                 className="text-gray-700 dark:text-white hover:text-white dark:hover:text-white hover:bg-primary-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                               >
                                 <item.icon
@@ -123,7 +123,7 @@ export default function NavigationBar({navigation, logo, companyName}) {
                                   aria-hidden="true"
                                 />
                                 {item.name}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -240,23 +240,24 @@ export default function NavigationBar({navigation, logo, companyName}) {
                                   <page.icon className="h-6 w-6 text-gray-700 dark:text-gray-400 group-hover:text-primary-700" aria-hidden="true" />
                                 </div>
                                 <div>
-                                  <a href={page.href} className="font-semibold text-gray-900 dark:text-white">
+                                  <Popover.Button as={Link} to={page.href} className="font-semibold text-gray-900 dark:text-white">
                                     {page.name}
                                     <span className="absolute inset-0" />
-                                  </a>
+                                  </Popover.Button>
                                   <p className="mt-1 text-gray-700 dark:text-gray-400">{page.description}</p>
                                 </div>
                               </div>
                             ))}
                           </div>
                           <div className="grid grid-cols-1 divide-x divide-gray-900/5 dark:divide-gray-800 bg-gray-50 dark:bg-gray-700">
-                            <a
+                            <Popover.Button
+                              as={Link}
                               key={item.name}
-                              href={item.href}
+                              to={item.href}
                               className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
                             >
                               View More
-                            </a>
+                            </Popover.Button>
                           </div>
                         </div>
                       </Popover.Panel>
