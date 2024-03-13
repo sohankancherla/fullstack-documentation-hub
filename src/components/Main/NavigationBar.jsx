@@ -114,17 +114,17 @@ export default function NavigationBar({navigation, logo, companyName}) {
                         <ul role="list" className="-mx-2 space-y-1">
                           {navigation.map((item) => (
                             <li key={item.name}>
-                              <Popover.Button
-                                as={Link}
+                              <Link
                                 to={item.href}
                                 className="text-gray-700 dark:text-white hover:text-white dark:hover:text-white hover:bg-primary-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                onClick={() => setSidebarOpen(false)}
                               >
                                 <item.icon
                                   className="text-gray-700 dark:text-white group-hover:text-white dark:group-hover:text-white hover:bg-primary-700 h-6 w-6 shrink-0"
                                   aria-hidden="true"
                                 />
                                 {item.name}
-                              </Popover.Button>
+                              </Link>
                             </li>
                           ))}
                         </ul>

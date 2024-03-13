@@ -6,6 +6,7 @@ import logo from "../../../assets/logo/logo-transparent.png"
 import NotFound from '../../Main/NotFound';
 import PythonPage from './PythonPage';
 import Installation from './Installation';
+import Print from './Print';
 
 const navigation = [
     {
@@ -13,23 +14,16 @@ const navigation = [
       links: [
         { title: 'What is Python?', href: '/backend/python' },
         { title: 'Installation', href: '/backend/python/installation' },
-        { title: 'IDE', href: '/backend/python/ide' },
       ],
     },
     {
-      title: 'Core concepts',
+      title: 'Basic Commands',
       links: [
-        { title: 'Understanding caching', href: '/docs/understanding-caching' },
+        { title: 'Print', href: '/backend/python/print' },
         {
-          title: 'Predicting user behavior',
-          href: '/docs/predicting-user-behavior',
+          title: 'Input', href: '/backend/python/input',
         },
-        { title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
-        {
-          title: 'Introduction to string theory',
-          href: '/docs/introduction-to-string-theory',
-        },
-        { title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },
+        { title: 'Len', href: '/backend/python/len' },
       ],
     },
     {
@@ -80,6 +74,9 @@ const Python = () => {
           } />}/>
           <Route path="/installation" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
             <Installation />
+          } />}/>
+          <Route path="/print" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
+            <Print />
           } />}/>
           <Route path="/*" element={<NotFound logo={logo} companyName={companyName} />} />
         </Routes>
