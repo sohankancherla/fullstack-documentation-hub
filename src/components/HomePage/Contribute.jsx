@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Contribute({ image, darkImage }) {
+export default function Contribute({ image, darkImage, title, description }) {
   return (
     <div className="relative isolate overflow-hidden bg-gray-100 dark:bg-gray-800">
       <svg
@@ -24,11 +24,10 @@ export default function Contribute({ image, darkImage }) {
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
           <h1 className="mt-10 text-4xl tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-            Can't find what your looking for?
+            {title}
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-400">
-            Add it yourself. FDH flourishes with your input. By improving existing content or creating new resources, 
-            you contribute directly to the enrichment and growth of the platform.
+            {description}
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a

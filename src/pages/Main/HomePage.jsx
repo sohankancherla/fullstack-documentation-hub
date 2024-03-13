@@ -46,6 +46,9 @@ const features = [
 const roadmapTitle = "Don't know where to start?";
 const roadmapDesc = "Check out our Full-Stack Developer Roadmap for a step-by-step path, ensuring a seamless transition from begineer to expert. ";
 
+const contributeTitle = "Can't find what your looking for?";
+const contributeDesc = "Add it yourself. FDH would love your input. By improving existing content or creating new resources, you contribute directly to the enrichment and growth of the platform.";
+
 const HomePage = () => {
   return (
     <>
@@ -61,7 +64,7 @@ const HomePage = () => {
           <Roadmap title={roadmapTitle} descritption={roadmapDesc}/>
         </section>
         <section>
-          <Contribute image={githubLight} darkImage={githubDark} />
+          <Contribute image={githubLight} darkImage={githubDark} title={contributeTitle} description={contributeDesc} />
         </section>
       </main>
     </>
