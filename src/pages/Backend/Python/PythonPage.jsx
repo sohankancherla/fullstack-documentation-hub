@@ -5,10 +5,11 @@ import Header2 from '../../../components/Layouts/Docs/Header2'
 import Header3 from '../../../components/Layouts/Docs/Header3'
 import Table from '../../../components/Layouts/Docs/Table'
 import UnorderedList from '../../../components/Layouts/Docs/UnorderedList'
+import DocLink from '../../../components/Layouts/Docs/DocLink'
 
 const title = "What is Python?"
 const section = "Introduction"
-const description = "Python is a programming language loved by many for its simple and intuitive syntax. Meta, Amazon, Apple, Google, and Microsoft are few of the many companies that use Python in their tech stack."
+const description = "Python is a programming language loved by many for its simple and intuitive syntax."
 const prevNext = {
     previousPage: null,
     previousHref: null,
@@ -39,12 +40,17 @@ const PythonPage = () => {
       content={
         <>
           <DocsHeader title={title} section={section} description={description}/>
+          <p>
+            Meta, Amazon, Apple, Google, and Microsoft are few of the many companies that use Python in their tech stack.
+          </p>
+
           <Header2 id={"popularity"} text={"Popularity"} />
           <p>
             In 2023, Python was the second most in-demand programming language among employers.
           </p>
           <Table />
-          <p>Source: <a className='text-primary-700 hover:text-primary-800' href="https://www.devjobsscanner.com/blog/top-8-most-demanded-programming-languages/">devjobsscanner</a></p>
+          <p>Source: <DocLink href="https://www.devjobsscanner.com/blog/top-8-most-demanded-programming-languages/">devjobsscanner</DocLink></p>
+          
           <Header2 id={"applications"} text={"Applications"} />
           <p>
             Developers use Python for many different applications because of its extensive collection of libraries.

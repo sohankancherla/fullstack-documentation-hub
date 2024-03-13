@@ -5,8 +5,8 @@ import { Features } from '../../components/HomePage/Features';
 import Header from '../../components/HomePage/Header';
 import Contribute from '../../components/HomePage/Contribute';
 import Roadmap from '../../components/HomePage/Roadmap';
-import githubLight from "../../assets/images/github-light.png";
-import githubDark from "../../assets/images/github-dark.png";
+import githubLight from "../../assets/images/Home/github-light.png";
+import githubDark from "../../assets/images/Home/github-dark.png";
 
 const bannerText = "Website is currently under construction aiming to be ready by May 2024!";
 const headerTextOne = "Everything About "

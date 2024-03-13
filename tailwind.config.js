@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         sans: ['Fira Sans Condensed', ...defaultTheme.fontFamily.sans],
         display: ['Fira Sans'],
+        mono: ['Fira Code'],
       },
       colors: {
         primary: {
