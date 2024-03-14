@@ -1,11 +1,19 @@
-import React from 'react'
+'use client';
+import { CodeBlock } from 'react-code-block';
+import { themes } from 'prism-react-renderer';
 
-const Terminal = ({ text }) => {
+function Terminal({ text }) {
   return (
-    <div className='font-mono text-sm p-4 my-4 rounded-lg text-slate-50 bg-slate-800 overflow-x-auto whitespace-nowrap'>
-        {text}
-    </div>
-  )
+    <CodeBlock code={text} language="shell" theme={themes.oceanicNext}>
+      <CodeBlock.Code className="font-mono text-sm p-4 my-4 rounded-lg bg-slate-800 overflow-x-auto">
+        <div className="table-row">
+          <CodeBlock.LineContent className="table-cell">
+            <CodeBlock.Token />
+          </CodeBlock.LineContent>
+        </div>
+      </CodeBlock.Code>
+    </CodeBlock>
+  );
 }
 
-export default Terminal
+export default Terminal;

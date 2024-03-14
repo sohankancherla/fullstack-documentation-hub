@@ -4,22 +4,13 @@ import { Routes, Route } from 'react-router-dom';
 import Header from '../../../components/Layouts/Docs/Header';
 import logo from "../../../assets/logo/logo-transparent.png"
 import NotFound from '../../Main/NotFound';
-import PythonPage from './PythonPage';
-import Installation from './Installation';
 import Print from './Print';
 
 const navigation = [
     {
-      title: 'Introduction',
-      links: [
-        { title: 'What is Python?', href: '/backend/python' },
-        { title: 'Installation', href: '/backend/python/installation' },
-      ],
-    },
-    {
       title: 'Basic Commands',
       links: [
-        { title: 'Print', href: '/backend/python/print' },
+        { title: 'Print', href: '/backend/python' },
         {
           title: 'Input', href: '/backend/python/input',
         },
@@ -70,12 +61,6 @@ const Python = () => {
     <>
         <Routes>
           <Route path="/" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
-            <PythonPage />
-          } />}/>
-          <Route path="/installation" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
-            <Installation />
-          } />}/>
-          <Route path="/print" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
             <Print />
           } />}/>
           <Route path="/*" element={<NotFound logo={logo} companyName={companyName} />} />
