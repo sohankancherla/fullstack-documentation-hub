@@ -18,12 +18,13 @@ const prevNext = {
 }
 const tableOfContents = [
   {
-    id: "print", title: "Using Print", children: [
-    ]
+    id: "print", title: "Using Print", children: []
   },
   {
-    id: "separate", title: "Print Separator", children: [
-    ]
+    id: "separate", title: "Print Separator", children: []
+  },
+  {
+    id: "printf", title: "Print f-strings", children: []
   },
 ];
 
