@@ -8,10 +8,10 @@ import DocCode from '../../../components/Layouts/Docs/DocCode'
 
 const title = "Print"
 const section = "Introduction"
-const description = "Use print() to display information to the terminal"
+const description = "Display information to the terminal"
 const prevNext = {
-    previousPage: "Installation",
-    previousHref: "/backend/python/installation",
+    previousPage: null,
+    previousHref: null,
     nextPage: "Input",
     nextHref: "/backend/python/input"
 }
@@ -100,7 +100,6 @@ export default function Print() {
             <p>
                 F-strings allow variables directly within strings inside of <TextCode text={'{}'} />, 
                 which enables easy formatting and readable code. 
-                This method is recommended whenever possible.
             </p>
             <DocCode code={code3} language="python" />
             <p>Output:</p>

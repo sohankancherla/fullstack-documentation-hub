@@ -5,6 +5,8 @@ import Header from '../../../components/Layouts/Docs/Header';
 import logo from "../../../assets/logo/logo-transparent.png"
 import NotFound from '../../Main/NotFound';
 import Print from './Print';
+import Input from './Input';
+import Len from './Len';
 
 const navigation = [
     {
@@ -62,6 +64,12 @@ const Python = () => {
         <Routes>
           <Route path="/" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
             <Print />
+          } />}/>
+          <Route path="/input" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
+            <Input />
+          } />}/>
+          <Route path="/len" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
+            <Len />
           } />}/>
           <Route path="/*" element={<NotFound logo={logo} companyName={companyName} />} />
         </Routes>
