@@ -7,6 +7,7 @@ import NotFound from '../../Main/NotFound';
 import Print from './Print';
 import Input from './Input';
 import Len from './Len';
+import BasicDataTypes from './BasicDataTypes';
 
 const navigation = [
     {
@@ -20,17 +21,12 @@ const navigation = [
       ],
     },
     {
-      title: 'Advanced guides',
+      title: 'Data Types and Variables',
       links: [
-        { title: 'Writing plugins', href: '/docs/writing-plugins' },
-        { title: 'Neuralink integration', href: '/docs/neuralink-integration' },
-        { title: 'Temporal paradoxes', href: '/docs/temporal-paradoxes' },
-        { title: 'Testing', href: '/docs/testing' },
-        { title: 'Compile-time caching', href: '/docs/compile-time-caching' },
-        {
-          title: 'Predictive data generation',
-          href: '/docs/predictive-data-generation',
-        },
+        { title: 'Basic Data Types', href: '/backend/python/datatypes' },
+        { title: 'Floats', href: '/backend/python/float' },
+        { title: 'Strings', href: '/backend/python/string' },
+        { title: 'Boolean', href: '/backend/python/bool' },
       ],
     },
     {
@@ -70,6 +66,9 @@ const Python = () => {
           } />}/>
           <Route path="/len" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
             <Len />
+          } />}/>
+          <Route path="/datatypes" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
+            <BasicDataTypes />
           } />}/>
           <Route path="/*" element={<NotFound logo={logo} companyName={companyName} />} />
         </Routes>

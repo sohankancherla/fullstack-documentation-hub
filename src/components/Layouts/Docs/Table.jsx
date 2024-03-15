@@ -1,16 +1,4 @@
-const data = [
-  ["1", "JavaScript/TypeScript", "29%"],
-  ["2", "Python", "20%"],
-  ["3", "Java", "17%"],
-  ["4", "C#", "12%"],
-  ["5", "PHP", "9%"],
-  ["6", "C/C++", "9%"],
-  ["7", "Ruby", "4%"],
-  ["8", "Go", "2%"],
-]
-const columns = ["Rank", "Programming Language", "Jobs"]
-
-export default function Table() {
+export default function Table({ columns, data }) {
   return (
     <div className="my-4">
       <div className="flow-root">
@@ -30,7 +18,7 @@ export default function Table() {
                 {data.map((row) => (
                   <tr key={row} className="even:bg-gray-50 dark:even:bg-gray-800">
                     {row.map((col) => (
-                      <td key={col} className="whitespace-nowrap px-3 py-4 text-sm text-gray-700 dark:text-gray-400">{col}</td>
+                      <td key={col} className="whitespace-nowrap font-mono px-3 py-4 text-sm text-gray-700 dark:text-gray-200">{col}</td>
                     ))}
                   </tr>
                 ))}

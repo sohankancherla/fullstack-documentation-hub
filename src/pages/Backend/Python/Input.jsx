@@ -7,7 +7,7 @@ import TextCode from '../../../components/Layouts/Docs/TextCode'
 import DocCode from '../../../components/Layouts/Docs/DocCode'
 
 const title = "Input"
-const section = "Introduction"
+const section = "Basic Commands"
 const description = "Get information from the user"
 const prevNext = {
     previousPage: "Print",
