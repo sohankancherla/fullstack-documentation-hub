@@ -8,6 +8,7 @@ import Print from './Print';
 import Input from './Input';
 import Len from './Len';
 import BasicDataTypes from './BasicDataTypes';
+import TypeConversion from './TypeConversion';
 
 const navigation = [
     {
@@ -24,9 +25,8 @@ const navigation = [
       title: 'Data Types and Variables',
       links: [
         { title: 'Basic Data Types', href: '/backend/python/datatypes' },
-        { title: 'Floats', href: '/backend/python/float' },
-        { title: 'Strings', href: '/backend/python/string' },
-        { title: 'Boolean', href: '/backend/python/bool' },
+        { title: 'Type Conversion', href: '/backend/python/convert' },
+        { title: 'Variables', href: '/backend/python/var' },
       ],
     },
     {
@@ -69,6 +69,9 @@ const Python = () => {
           } />}/>
           <Route path="/datatypes" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
             <BasicDataTypes />
+          } />}/>
+          <Route path="/convert" element={<Layout header={<Header title={title} pages={pages}/>} navigation={navigation} children={
+            <TypeConversion />
           } />}/>
           <Route path="/*" element={<NotFound logo={logo} companyName={companyName} />} />
         </Routes>

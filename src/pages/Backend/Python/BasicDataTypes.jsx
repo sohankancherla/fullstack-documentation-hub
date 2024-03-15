@@ -2,21 +2,19 @@ import React from 'react'
 import DocsLayout from '../../../components/Layouts/Docs/DocsLayout'
 import DocsHeader from '../../../components/Layouts/Docs/DocsHeader'
 import Header2 from '../../../components/Layouts/Docs/Header2'
-import Header3 from '../../../components/Layouts/Docs/Header3'
 import Terminal from '../../../components/Layouts/Docs/Terminal'
 import DocCode from '../../../components/Layouts/Docs/DocCode'
 import TextCode from '../../../components/Layouts/Docs/TextCode'
-import Table from '../../../components/Layouts/Docs/Table'
 
 const title = "Basic Data Types"
 const section = "Data Types and Variables"
-const description = "Data types enable developers to store different forms of data."
-+ " Python is a dynamically typed language, which means variables do not need to be given an explicit type but they are determined when the code runs"
+const description = "Data types enable developers to store different forms of data"
+
 const prevNext = {
     previousPage: "Len",
     previousHref: "/backend/python/len",
-    nextPage: "Basic Data Types",
-    nextHref: "/backend/python/datatypes"
+    nextPage: "Type Conversion",
+    nextHref: "/backend/python/convert"
 }
 
 const tableOfContents = [
@@ -25,15 +23,6 @@ const tableOfContents = [
     {id: "string", title: "Strings", children: []},
     {id: "bool", title: "Booleans", children: []},
 ];
-
-const data = [
-    ['x = 5', "int"],
-    ['x = 3.14', "float"],
-    ['x = "Hello World!', "str"],
-    ['x = True', "boolean"],
-  ]
-
-const columns = ["Example", "Data Type"]
 
 const code1 = `
 x = 5
